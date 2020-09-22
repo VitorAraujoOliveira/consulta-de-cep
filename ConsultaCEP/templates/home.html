@@ -1,0 +1,139 @@
+
+<style>
+.button {
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px 2px;
+  cursor: pointer;
+}
+
+
+.response {
+  border: 5pt;
+  border-color: greenyellow;
+  color: green;
+  padding: 15px 32px;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px 2px;
+  
+}
+
+</style>
+<!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+
+
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+<div class="container-fluid p-3 my-3 bg-dark text-white">
+  Olá {{ user.username }}! Aqui estão os logs de pesquisas:
+  <table class="table table-bordered table-dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">CEP Pesquisado</th>
+        <th scope="col">Endereço</th>
+        <th scope="col">Cidade/Estado</th>
+        <th scope="col">Info</th>
+        <th scope="col">Hora Pesquisa</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="d-flex justify-content-center"><h2>
+    Pesquise o CEP se desejar!
+  </h2></div>
+  <div class="d-flex justify-content-center">
+    <div class="p-2">
+      <p>CEP:  </p>
+    </div>
+    <div class="p-1"><input type="text"></div>
+    <div class="p-1"><button>Consultar</button></div>
+
+  </div>
+  <p><a href="{% url 'logout' %}"><button class="button ">Sair</button></a></p>
+  <p><a href="{% url 'password_reset' %}"><button class="button">Resetar senha</button></a></p>
+</div>
+{% else %}
+<div class="container-fluid p-3 my-3 bg-dark text-white">
+
+  <p></p>
+  <p>Clique a baixo para entrar como ADMIN</p>
+  <a href="{% url 'login' %}"><button class="button">Entrar</button></a>
+
+  <div class = "row"><p class="text-center ">Caso prefira apenas consultar o CEP use a função abaixo:</p></div>
+  
+  <h1 class="d-flex justify-content-center">CONSULTA DE CEP:</h1>
+
+
+
+  <div class="d-flex justify-content-center">
+    <div class="p-2">
+      <p>CEP:  </p>
+    </div>
+    <div class="p-1"><input type="text"></div>
+    <div class="p-1"><button>Consultar</button></div>
+
+  </div>
+
+  
+
+
+  <div class="response">
+    <table class="table table-bordered table-dark">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">CEP</th>
+          <th scope="col">Endereço</th>
+          <th scope="col">Cidade/Estado</th>
+          <th scope="col">Info</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+
+
+{% endif %}
+{% endblock %}
