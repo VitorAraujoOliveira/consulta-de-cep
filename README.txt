@@ -18,3 +18,21 @@ Critérios de aceitação:
 
 
 Documentação está localizada na pasta "Documentação", é composta do Arquivo word (Documentação.docx) <Principal>
+
+O funcionamento do APP está descrito em melhores detalhes em (Funcionamento Doc.png) <imagem>
+
+A relação cliente servidor está descrita em (Cliente-Servidor.png) <imagem>
+
+
+
+Notas de implementação:
+
+Não foi possível implementara funcionalidades do front end. As APIs e Scripts funcionam perfeitamente mas não consegui
+implementar funcionalidades do front end pelos motivos:
+
+TCC - A entrega final do TCC era dia 19/09, tive de fazer várias correções e logo não consegui trabalhar no app.
+Provas - A semana de 21 a 25 é uma semana de provas, com o estado atual estamos trabalhando em EAD, logo tive de conciliar as atividades passadas pelos professores com a implementação.
+Freelance - No momento estou trabalhando como freelance, tive de fazer alguns itens nesta semana, também conciliando com todos os outros.
+
+
+Com isso dito, todas as APIs estão funcionais assim como scripts!

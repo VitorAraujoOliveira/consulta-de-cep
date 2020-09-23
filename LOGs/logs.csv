@@ -1,0 +1,5 @@
+banco;status;cep_pesquisado;cep_retornado;cidade;estado;logradouro;bairro;data_pesquisa
+Correios;Cep não encontrado
+Local;CEP encontrado;14401362;14401000;Franca;SP;Avenida Doutor HÃ©lio Palermo - de 2876 ao fim - lado par;Prolongamento Vila Duque de Caxias;23/09/2020 14:49:57
+Correios;CEP encontrado;14401362;14401-362;Franca;SP;Rua Doutor Clemente Segundo Pinho;Santo Agostinho;23/09/2020 14:50:22
+Local;Cep não encontrado;;;;;;;23/09/2020 14:51:17
